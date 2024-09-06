@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #2196f3;
+    --secondary-color: #ff4081;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 i {
+    margin-right: 10px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit-asnwer {
+    margin-top: 50px;
+}
+
+#answer-input {
+    text-align: left;
+}
+
+.btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn.secondary {
+    background-color: #f5f5f5;
+    color: var(--text-color);
+}
+
+.btn.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
+}
+
+.timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#question-display {
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 auto 20px;
+}
+
+.feedback-box {
+    background-color: #fff9c4;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-selector {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between buttons */
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center container horizontally within parent */
+    align-items: center; /* Center items vertically */
+}
+
+.time-btn {
+    flex: 1; /* Allow buttons to grow to fill space */
+    max-width: 8rem; /* Maximum width of buttons */
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center; /* Center text inside the button */
+}
+
+/* Optionally, if you want buttons to have equal size */
+.time-selector > .time-btn {
+    flex: 1;
+    text-align: center; /* Center text inside the button */
+}
+
+
+.time-btn:hover, .time-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .time-selector {
+        flex-wrap: wrap;
+    }
+    
+    .time-btn {
+        flex-basis: calc(50% - 5px);
+    }
+}

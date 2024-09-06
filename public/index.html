@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Mock Interview</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-laptop-code"></i> PM Mock Interview</h1>
+
+        <div id="preparation" class="section card">
+            <h2>Step 1: Preparation</h2>
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <select id="company"></select>
+            </div>
+            <div class="form-group">
+                <label for="question-type">Question Type:</label>
+                <select id="question-type"></select>
+            </div>
+            <div class="form-group">
+                <label>Time Limit:</label>
+                <div class="time-selector">
+                    <button class="time-btn" data-time="10">10 min</button>
+                    <button class="time-btn" data-time="20">20 min</button>
+                    <button class="time-btn" data-time="30">30 min</button>
+                    <button class="time-btn" data-time="40">40 min</button>
+                </div>
+            </div>
+            <button id="start-interview" class="btn pulse"><i class="fas fa-play"></i>Start Interview</button>
+        </div>
+
+        <div id="answer" class="section card hidden">
+            <h2>Step 2: Answer</h2>
+            <div id="timer" class="timer">00:00</div>
+            <div id="question-display" class="question-box"></div>
+            <div id="answer-input" contenteditable="true" class="answer-box"></div>
+            <br>
+            <button id="submit-answer" class="btn">Submit Answer</button>
+        </div>
+
+        <div id="review" class="section card hidden">
+            <h2>Step 3: Review</h2>
+            <div id="review-loading" class="loading hidden">Analyzing your answer...</div>
+            <!-- Hide the score display -->
+            <div id="score-display" class="score-circle" style="display: none;"></div>
+            <div id="feedback" class="feedback-box"></div>
+            <div class="button-group">
+                <button id="try-again" class="btn secondary">Same Question</button>
+                <button id="new-question" class="btn">New Question</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

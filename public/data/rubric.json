@@ -1,0 +1,30 @@
+{
+  "criteria": [
+    {
+      "name": "Content Relevance",
+      "description": "How well the answer addresses the question",
+      "weight": 0.3
+    },
+    {
+      "name": "Clarity of Explanation",
+      "description": "How clear and understandable the answer is",
+      "weight": 0.2
+    },
+    {
+      "name": "Structure",
+      "description": "How well-organized the answer is",
+      "weight": 0.2
+    },
+    {
+      "name": "Depth of Analysis",
+      "description": "How in-depth and thoughtful the answer is",
+      "weight": 0.3
+    }
+  ],
+  "scoringGuide": {
+    "1": "Poor - Does not meet expectations",
+    "2": "Fair - Partially meets expectations",
+    "3": "Good - Meets expectations",
+    "4": "Excellent - Exceeds expectations"
+  }
+}
